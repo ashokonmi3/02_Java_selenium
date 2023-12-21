@@ -1,5 +1,10 @@
 package selenium;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
 // public class EditBox
 // Type in edit box--
 // sendKeys()
@@ -40,19 +45,18 @@ package selenium;
 // }
 // }
 // ================
-// public class SEL_03_EditBox {
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver = new ChromeDriver();
-// driver.get("https://google.com");
-// // send multiple string in send keys
-// // press number 1
-// driver.findElement(By.name("q")).sendKeys(Keys.NUMPAD1);
-// driver.findElement(By.name("q")).sendKeys(Keys.chord(Keys.SHIFT, "UserName",
-// "abc"));
-// Thread.sleep(5000);
-// driver.quit();
-// }
-// }
+public class SEL_03_EditBox {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		driver.get("https://google.com");
+		// send multiple string in send keys
+		// press number 1
+		driver.findElement(By.name("q")).sendKeys(Keys.NUMPAD1);
+		driver.findElement(By.name("q")).sendKeys(Keys.chord(Keys.SHIFT, "UserName", "abc"));
+		Thread.sleep(5000);
+		driver.quit();
+	}
+}
 
 // ======================
 // public class SEL_03_EditBox {
