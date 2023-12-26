@@ -37,22 +37,23 @@ import org.openqa.selenium.chrome.ChromeDriver;
 // SEL_01_WebDriverDemoWebsite.html
 
 // ==========================================
-public class SEL_01_BrowserOperation {
-
-	public static void main(String[] args) throws InterruptedException {
-		// String exePath = "C:\\Users\\assharma\\Desktop\\chromedriver.exe";
-		// System.setProperty("webdriver.chrome.driver", exePath);
-
-		WebDriver driver = new ChromeDriver();
-		// WebDriver driver1 = new FirefoxDriver();
-
-		driver.get("https://www.google.co.in");
-		// driver.get("https://www.rediff.com");
-		Thread.sleep(3000);
-		driver.quit();
-	}
-
-}
+//public class SEL_01_BrowserOperation {
+//
+//	public static void main(String[] args) throws InterruptedException {
+//		// String exePath = "C:\\Users\\assharma\\Desktop\\chromedriver.exe";
+//		// System.setProperty("webdriver.chrome.driver", exePath);
+//
+//		WebDriver driver = new ChromeDriver();
+//		// WebDriver driver1 = new FirefoxDriver();
+//
+//		driver.get("https://ashokonmi3.github.io/Selenium.Pages/Web_Elements.html");
+//		// driver.get("https://www.rediff.com");
+//		Thread.sleep(3000);
+//
+//		driver.quit();
+//	}
+//
+//}
 // ====================
 /*
  * Difference between close and quit: 1) Close browser closes the current
@@ -79,30 +80,71 @@ public class SEL_01_BrowserOperation {
 
 // ===============================
 // Work offline
-// public class SEL_01_BrowserOperation {
-// //
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver = new ChromeDriver();
-// String currentDirectory = System.getProperty("user.dir");
-// System.out.println("Current directory " + currentDirectory);
-// String url = currentDirectory +
-// "//webpages//SEL_01_WebDriverDemoWebsite.html";
-// driver.get(url);
-// Thread.sleep(3000);
-// driver.manage().window().maximize();// We do not have any method to
-// Thread.sleep(3000);
-// driver.quit();
-// }
-//
-// }
+public class SEL_01_BrowserOperation {
+	//
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver = new ChromeDriver();
+		String currentDirectory = System.getProperty("user.dir");// it gives the
+		// current directory
+		System.out.println("Current directory " + currentDirectory);
+		String url = currentDirectory + "\\SEL_01_WebDriverDemoWebsite.html";
+		url = currentDirectory + "\\SEL_01_WebDriverDemoWebsite.html";
+		System.out.println("url is : " + url);
+		driver.get(url); // to be fixed
+
+		// driver.get(
+		// "file:///D:/Study/Java_Automation_git/Selenium_Learning/learning/src/main/java/selenium/learning/SEL_01_WebDriverDemoWebsite.html");
+		Thread.sleep(3000);
+		driver.manage().window().maximize();// We do not have any method to
+
+		Thread.sleep(3000);
+		driver.quit();
+	}
+
+}
+// ===================
+
+// Open a url
+// Maximize
+// Close
+// Minimize
+// Resize
+// Navigation to different tab
+// close tab
+// refresh
+// Navigate back and forward
+// Title of web page
+// page source
+// Resize the browser size
+
 // =========================
+// driver.manage().window().maximize() is a fluent method chaining technique,
+// where each method call returns an object that allows the invocation of
+// subsequent methods.
+// driver.manage() returns an instance of Options for managing browser settings.
+// window() returns an instance of Window for managing window-specific settings.
+// maximize() maximizes the browser window to the full available screen space,
+// providing a larger viewing area for web content.
+
+// driver.manage().window().maximize === maximize the window
+// driver.manage().window().getsize() === REturn the current size of window
+// driver.manage().window().getsize( dimesion)
+// dimesion = new Dimension(700,300)
+
 // public class SEL_01_BrowserOperation {
 //
 // public static void main(String[] args) throws InterruptedException {
 // WebDriver driver = new ChromeDriver();
 // driver.get("https://www.google.co.in");
+//
+// String str1 = new String("Selenium Testing");
+// str1.trim();
+//
 // Thread.sleep(3000);
 // driver.manage().window().maximize();
+// // Options a = driver.manage();
+// // Window b = a.window();
+// // b.maximize();
 // System.out.println(driver.manage().window().getSize());
 // System.out.println(driver.manage().window().getSize().getHeight());
 // System.out.println(driver.manage().window().getSize().getWidth());
@@ -110,7 +152,13 @@ public class SEL_01_BrowserOperation {
 // driver.manage().window().setSize(new Dimension(720, 200));// selenium
 // Thread.sleep(3000);
 // System.out.println("current size is " + driver.manage().window().getSize());
+// if (driver.manage().window().getSize().getHeight() == 200
+// && driver.manage().window().getSize().getWidth() == 720) {
+// System.out.println("the size is set correctly as 720 and 200 ");
 //
+// } else {
+// System.out.println("the size is not set correctly as 720 and 200 ");
+// }
 // Thread.sleep(3000);
 // driver.quit();
 // }
@@ -159,6 +207,7 @@ public class SEL_01_BrowserOperation {
 //
 // String pageSource = driver.getPageSource();
 // System.out.println(pageSource);
+// pageSource.
 // System.out.println(
 // "PAGE SOURCE CONTAINS Copyright Info " + pageSource.contains("Copyright
 // (c)2010 Robert Kieffer"));
@@ -166,3 +215,4 @@ public class SEL_01_BrowserOperation {
 //
 // }
 // }
+// =======================

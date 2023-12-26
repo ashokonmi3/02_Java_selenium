@@ -1,8 +1,8 @@
-package selenium;
+package selenium.learning;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 // public class EditBox
@@ -13,85 +13,85 @@ import org.openqa.selenium.chrome.ChromeDriver;
 // isdisplayed
 // Getattribute
 // ===============================
-// public class SEL_03_EditBox {
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver = new ChromeDriver();
-// driver.get("https://ashokonmi3.github.io/Selenium.Pages/login.html");
-// driver.findElement(By.name("username")).sendKeys("root");
-// Thread.sleep(5000);
-// driver.findElement(By.name("username")).clear();
-// Thread.sleep(5000);
-// driver.findElement(By.name("username")).sendKeys("root");
-// Thread.sleep(5000);
-// driver.findElement(By.name("password")).sendKeys("root");
-// Thread.sleep(5000);
-// driver.findElement(By.xpath("/html/body/form/input[3]")).sendKeys(Keys.ENTER);
-// // driver.findElement(By.id("tdb1")).sendKeys(Keys.ENTER);
-// Thread.sleep(5000);
-// driver.quit();
-// }
-// }
+//public class SEL_03_EditBox {
+//	public static void main(String[] args) throws InterruptedException {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("https://ashokonmi3.github.io/Selenium.Pages/login.html");
+//		driver.findElement(By.name("username")).sendKeys("root");
+//		Thread.sleep(5000);
+//		driver.findElement(By.name("username")).clear();
+//		Thread.sleep(5000);
+//		driver.findElement(By.name("username")).sendKeys("root");
+//		Thread.sleep(5000);
+//		driver.findElement(By.name("password")).sendKeys("root");
+//		Thread.sleep(5000);
+//		driver.findElement(By.xpath("/html/body/form/input[3]")).sendKeys(Keys.ENTER);
+//		// driver.findElement(By.id("tdb1")).sendKeys(Keys.ENTER);
+//		Thread.sleep(5000);
+//		driver.quit();
+//	}
+//}
 // =============================
 //
-// public class SEL_03_EditBox {
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver = new ChromeDriver();
-// driver.get("https://google.com");
-// // send multiple string in send keys
-// String a = "java ";
-// driver.findElement(By.name("q")).sendKeys(a, "Selenium -", "varargs");
-// Thread.sleep(5000);
-// driver.quit();
-// }
-// }
+//public class SEL_03_EditBox {
+//	public static void main(String[] args) throws InterruptedException {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("https://google.com");
+//		// send multiple string in send keys
+//		String a = "java ";
+//		driver.findElement(By.name("q")).sendKeys(a, "Selenium -", "varargs");
+//		Thread.sleep(5000);
+//		driver.quit();
+//	}
+//}
 // ================
-public class SEL_03_EditBox {
-	public static void main(String[] args) throws InterruptedException {
-		WebDriver driver = new ChromeDriver();
-		driver.get("https://google.com");
-		// send multiple string in send keys
-		// press number 1
-		driver.findElement(By.name("q")).sendKeys(Keys.NUMPAD1);
-		driver.findElement(By.name("q")).sendKeys(Keys.chord(Keys.SHIFT, "UserName", "abc"));
-		Thread.sleep(5000);
-		driver.quit();
-	}
-}
+//public class SEL_03_EditBox {
+//	public static void main(String[] args) throws InterruptedException {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("https://google.com");
+//		// send multiple string in send keys
+//		// press number 1
+//		driver.findElement(By.name("q")).sendKeys(Keys.NUMPAD1);
+//		driver.findElement(By.name("q")).sendKeys(Keys.chord(Keys.SHIFT, "UserName", "abc"));
+//		Thread.sleep(5000);
+//		driver.quit();
+//	}
+//}
 
 // ======================
-// public class SEL_03_EditBox {
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver = new ChromeDriver();
-// driver.get("https://ashokonmi3.github.io/Selenium.Pages/login.html");
-// WebElement username = driver.findElement(By.name("username"));
-// username.sendKeys("root"); // Entering values in edit box
-// String text = username.getAttribute("value");
-// System.out.println(text);// Return the value in the edit box
-// System.out.println("isDisplayed: " + username.isDisplayed());// Return the
-// // Displayed status
-// System.out.println("Is Enabled: " + username.isEnabled());// Return the
-// // enabled status
-// Thread.sleep(5000);
-// driver.quit();
-// }
-// }
+//public class SEL_03_EditBox {
+//	public static void main(String[] args) throws InterruptedException {
+//		WebDriver driver = new ChromeDriver();
+//		driver.get("https://ashokonmi3.github.io/Selenium.Pages/login.html");
+//		WebElement username = driver.findElement(By.name("username"));
+//		username.sendKeys("root"); // Entering values in edit box
+//		String text = username.getAttribute("value");
+//		System.out.println(text);// Return the value in the edit box
+//		System.out.println("isDisplayed: " + username.isDisplayed());// Return the
+//		// Displayed status
+//		System.out.println("Is Enabled: " + username.isEnabled());// Return the
+//		// enabled status
+//		Thread.sleep(5000);
+//		driver.quit();
+//	}
+//}
 
 // ==============
-// public class SEL_03_EditBox {
-// public static void main(String[] args) throws InterruptedException {
-// WebDriver driver1 = new ChromeDriver();
-// driver1.get("https://ashokonmi3.github.io/Selenium.Pages/disabledEditBox.html");
-// Thread.sleep(5000);
-// WebElement username = driver1.findElement(By.name("lname"));
-// // username.sendKeys("admin"); // Entering values in edit box
-// Thread.sleep(5000);
-//
-// System.out.println("isDisplayed: " + username.isDisplayed());// Return the
-// // // Displayed status
-// System.out.println("Is Enabled: " + username.isEnabled());// Return the
-// // // enabled status
-// Thread.sleep(5000);
-// driver1.quit();
-// }
-//
-// }
+public class SEL_03_EditBox {
+	public static void main(String[] args) throws InterruptedException {
+		WebDriver driver1 = new ChromeDriver();
+		driver1.get("https://ashokonmi3.github.io/Selenium.Pages/disabledEditBox.html");
+		Thread.sleep(5000);
+		WebElement username = driver1.findElement(By.name("lname"));
+		// username.sendKeys("admin"); // Entering values in edit box
+		Thread.sleep(5000);
+
+		System.out.println("isDisplayed: " + username.isDisplayed());// Return the
+		// // Displayed status
+		System.out.println("Is Enabled: " + username.isEnabled());// Return the
+		// // enabled status
+		Thread.sleep(5000);
+		driver1.quit();
+	}
+
+}
