@@ -1,59 +1,12 @@
-package selenium;
+package selenium.learning;
+
+import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-// ===========================
-//public class SEL_12_Waits {
-//	public static void main(String[] args) throws InterruptedException {
-//		WebDriver driver = new ChromeDriver();
-//		// // open google.com
-//		driver.get("https://ashokonmi3.github.io/Selenium.Pages//ExplicitlyWait.html");
-//		Thread.sleep(3000);
-//		driver.findElement(By.xpath("//button[@id='alert']")).click();
-//		Thread.sleep(3000);
-//
-//		try {
-//			Alert ale = driver.switchTo().alert();
-//			// Thread.sleep(3000);
-//			String s = ale.getText();
-//			// System.out.println(s);
-//			ale.accept();
-//		} catch (Exception E) {
-//			System.out.println("Element not found closing the  browser");
-//			driver.quit();
-//		}
-//	}
-//}
-// ==================
-////
-/*
- * Let us consider practical application in that we are having more the 8 pages
- * and 50 operations if we use Thread.sleep(10000) for 50 times then it is 500
- * seconds around 10 minutes, so the dead time is more but no one prefer to wait
- * .
- */
-// ======================
-/*
- * applicable only to driver.get() and driver.navigate().to() Page load timeout
- * in selenium requests/set the time limit for a page to load, If the page is
- * not loaded within the given time frame selenium throws TimeOutException
- * exception // // //
- */
-//public class SEL_12_Waits {
-//	public static void main(String[] args) {
-//		// set chrome driver exe path
-//		WebDriver driver = new ChromeDriver();
-//		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-//		driver.get("https://google.com");
-//		// set the time of 30 seconds for page to complete the loading
-//		System.out.println("loading completed");
-//		driver.quit();
-//	}
-//}
 
 // ===============================
 /*
@@ -106,7 +59,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //	public static void main(String[] args) throws InterruptedException {
 //		// open firefox/
 //		WebDriver driver = new ChromeDriver();
-//		WebDriverWait wait = new WebDriverWait(driver, 6 /* timeout in seconds */);
+//
+//		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(6));
 //
 //		// open google.com
 //		driver.get("https://ashokonmi3.github.io/Selenium.Pages//ExplicitlyWait.html");
@@ -124,7 +78,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 //}
 
 // ===============
-//
+////
 public class SEL_12_Waits {
 
 	public static void main(String[] args) throws InterruptedException {
@@ -133,7 +87,7 @@ public class SEL_12_Waits {
 			driver.get("https://ashokonmi3.github.io/Selenium.Pages//SEL_12_Waits.html");
 			driver.findElement(By.id("enable-button")).click();
 
-			WebDriverWait wait = new WebDriverWait(driver, 30 /* timeout in seconds */);
+			WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(11));
 
 			// throws TimeoutException if element does not become as clickable in given
 			// time
@@ -142,6 +96,9 @@ public class SEL_12_Waits {
 			Thread.sleep(5000);
 
 			driver.findElement(By.id("enable-button")).click();
+
+			System.out.println("Button is clickable now");
+
 			Thread.sleep(5000);
 
 			driver.quit();
