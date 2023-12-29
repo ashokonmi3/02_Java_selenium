@@ -1,4 +1,4 @@
-package selenium;
+package selenium.learning;
 
 import java.util.List;
 

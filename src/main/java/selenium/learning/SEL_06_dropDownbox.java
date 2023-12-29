@@ -1,4 +1,4 @@
-package selenium;
+package selenium.learning;
 
 /*
  * Select is a class which is provided by Selenium to perform multiple
@@ -17,14 +17,14 @@ package selenium;
 // "https://ashokonmi3.github.io/Selenium.Pages/SEL_01_WebDriverDemoWebsite.html";
 // driver.get(baseURL);
 // Thread.sleep(3000);
-// Select drpSubject = new Select(driver.findElement(By.name("languages")));//
+// Select drpSubject = new Select(driver.findElement(By.name("languages")));
 // drpSubject.selectByIndex(5);// index starts with 0
 // Thread.sleep(5000);
 // drpSubject.selectByVisibleText("JavaScript");
 // Thread.sleep(3000);
 // drpSubject.selectByValue("Python");
 // Thread.sleep(3000);
-// driver.close();
+// driver.quit();
 // }
 // }
 
@@ -49,8 +49,7 @@ package selenium;
 // fruits.deselectAll();
 // Thread.sleep(2000);
 // // fruits.selectAll(); Not supported
-//
-// driver.close();
+// driver.quit();
 // }
 // }
 //// =====================================================
